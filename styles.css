@@ -3,6 +3,7 @@
 :root {
   --my-margin: 40px;
   --button-color: #5c98c0;
+  --credit-color: white;
   font-family: 'Montserrat', cursive;
 }
 
@@ -106,9 +107,9 @@ button:active {
   color: white;
 }
 
-a {
-  font-weight: bold;
+.bottom a {
   text-decoration: none;
+  font-weight: bold;
   color: var(--button-color)
 }
 
@@ -152,6 +153,7 @@ form > div > div {
 }
 
 .credit {
+  color: var(--credit-color);
   position: absolute;
   left: 0;
   right: 0;
@@ -159,4 +161,8 @@ form > div > div {
   margin-right: auto;
   width: 267px;
   bottom: 5px;
+}
+
+.left a {
+  color: var(--credit-color);
 }
