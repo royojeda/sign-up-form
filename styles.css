@@ -18,7 +18,7 @@ body {
 }
 
 .left {
-  /* width: 37%; */
+  width: 34%;
   display: flex;
 }
 
@@ -42,7 +42,9 @@ body {
 
 .middle {
   position: relative;
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 30%;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
@@ -57,11 +59,10 @@ body {
 .bottom {
   background-color: #f9fafb;
   height: 35%;
+  padding: var(--my-margin);
 }
 
 .right > div > div {
-  margin-left: var(--my-margin);
-  margin-right: var(--my-margin);
   max-width: 60rem;
 }
 
@@ -69,16 +70,17 @@ body {
   margin-bottom: calc(var(--my-margin) / 2);
 }
 
-.top > div:last-child {
-  margin-bottom: var(--my-margin);
+.middle > div:first-child {
+  margin-top: calc(var(--my-margin) / 2);
+  margin-bottom: calc(var(--my-margin) / 2);
+}
+
+.middle > div:last-child {
+  margin-bottom: calc(var(--my-margin) / 2);
 }
 
 .bottom > div:not(:first-child) {
   margin-top: calc(var(--my-margin) / 2);
-}
-
-.bottom > div:first-child {
-  margin-top: var(--my-margin);
 }
 
 button {
@@ -108,4 +110,25 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: var(--button-color)
+}
+
+label {
+  font-size: 1rem;
+}
+
+input {
+  font-size: 1.5rem;
+}
+
+form {
+  display: flex;
+}
+
+form > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+form > div > div:not(:last-child) {
+  margin-bottom: 2rem;
 }
