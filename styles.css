@@ -3,10 +3,11 @@
 :root {
   --my-margin: 40px;
   --button-color: #5c98c0;
+  font-family: 'Montserrat', cursive;
 }
 
 * {
-  /* outline: 1px solid black; */
+  outline: 1px solid black;
   margin: 0;
   padding: 0;
 }
@@ -33,26 +34,10 @@ body {
 }
 
 .top {
-  font-family: 'Montserrat', cursive;
   font-size: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-}
-
-p {
-  margin: calc(var(--my-margin) / 2) var(--my-margin) calc(var(--my-margin) / 2) var(--my-margin);
-  max-width: 60rem;
-}
-
-.top > p:last-child {
-  margin-bottom: var(--my-margin);
-}
-
-.top,
-.bottom {
-  background-color: #f9fafb;
-  height: 35%;
 }
 
 .middle {
@@ -62,19 +47,37 @@ p {
 }
 
 .bottom {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.bottom > p {
-  margin: calc(var(--my-margin) / 2) var(--my-margin) calc(var(--my-margin) / 2) var(--my-margin);
-  font-family: 'Montserrat', cursive;
-  font-size: 20px;
+.top,
+.bottom {
+  background-color: #f9fafb;
+  height: 35%;
 }
 
+.right > div > div {
+  margin-left: var(--my-margin);
+  margin-right: var(--my-margin);
+  max-width: 60rem;
+}
 
-.bottom > p:first-child {
+.top > div > p:not(:last-child) {
+  margin-bottom: calc(var(--my-margin) / 2);
+}
+
+.top > div:last-child {
+  margin-bottom: var(--my-margin);
+}
+
+.bottom > div:not(:first-child) {
+  margin-top: calc(var(--my-margin) / 2);
+}
+
+.bottom > div:first-child {
   margin-top: var(--my-margin);
 }
 
