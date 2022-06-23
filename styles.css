@@ -7,7 +7,7 @@
 }
 
 * {
-  outline: 1px solid black;
+  /* outline: 1px solid black; */
   margin: 0;
   padding: 0;
 }
@@ -34,13 +34,14 @@ body {
 }
 
 .top {
-  font-size: 30px;
+  font-size: 1.9rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
 .middle {
+  flex: none;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,7 +50,7 @@ body {
 }
 
 .bottom {
-  font-size: 20px;
+  font-size: 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -59,6 +60,9 @@ body {
 .bottom {
   background-color: #f9fafb;
   height: 35%;
+}
+
+.right > div {
   padding: var(--my-margin);
 }
 
@@ -71,11 +75,6 @@ body {
 }
 
 .middle > div:first-child {
-  margin-top: calc(var(--my-margin) / 2);
-  margin-bottom: calc(var(--my-margin) / 2);
-}
-
-.middle > div:last-child {
   margin-bottom: calc(var(--my-margin) / 2);
 }
 
@@ -113,15 +112,27 @@ a {
 }
 
 label {
-  font-size: 1rem;
+  font-size: .9rem;
 }
 
 input {
   font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
 }
 
 form {
+  flex: 1;
+  max-width: 50rem;
   display: flex;
+  gap: 5rem;
+}
+
+form > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 form > div > div {
@@ -129,6 +140,12 @@ form > div > div {
   flex-direction: column;
 }
 
-form > div > div:not(:last-child) {
-  margin-bottom: 2rem;
+.middle > div:last-child {
+  flex: 1;
+  display: flex;
+}
+
+.middle > div:first-child {
+  flex: none;
+  font-size: 1.9rem;
 }
