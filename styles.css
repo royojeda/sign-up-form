@@ -1,22 +1,25 @@
 * {
-  outline: 1px solid white;
+  /* outline: 1px solid black; */
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: black;
   height: 100vh;
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
 .left {
   width: 37%;
+  display: flex;
+}
+
+.left img {
+  flex: 1
 }
 
 .right {
   flex: 1;
-  background-color: rgb(46, 46, 46);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,9 +27,10 @@ body {
 
 .top,
 .bottom {
+  background-color: #f9fafb;
   height: 35%;
 }
 
 .middle {
-  flex: 1
+  flex: 1;
 }
