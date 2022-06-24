@@ -3,7 +3,7 @@
 :root {
   --my-margin: 40px;
   --button-color: #5c98c0;
-  --credit-color: white;
+  --credits-color: white;
   font-family: 'Montserrat', cursive;
 }
 
@@ -161,17 +161,35 @@ form > div > div {
   font-size: 1.9rem;
 }
 
-.credit {
-  color: var(--credit-color);
+.credits {
+  color: var(--credits-color);
   position: absolute;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 267px;
+  width: 287px;
   bottom: 5px;
+  text-align: center;
+}
+
+.name {
+  background-color: rgba(0, 0, 0, 0.836);
+  color: var(--credits-color);
+  font-size: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name img {
+  max-width: 200px;
 }
 
 .left a {
-  color: var(--credit-color);
+  color: var(--credits-color);
 }
