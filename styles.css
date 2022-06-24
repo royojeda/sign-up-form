@@ -148,6 +148,7 @@ form > div {
 
 form > div > div {
   display: flex;
+  height: 50px;
   flex-direction: column;
 }
 
@@ -192,4 +193,16 @@ form > div > div {
 
 .left a {
   color: var(--credits-color);
+}
+
+input + span {
+  visibility: hidden;
+  position: relative;
+  margin-top: 5px;
+  font-size: .75rem;
+}
+
+input + span::before {
+  content: '✖ Password do not match.';
+  color: red;
 }
