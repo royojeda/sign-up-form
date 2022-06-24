@@ -85,8 +85,8 @@ body {
 }
 
 button {
-  background-color: white;
-  color: var(--button-color);
+  background-color: var(--button-color);
+  color: white;
   font-size: 1.3rem;
   font-weight: bold;
   width: 15rem;
@@ -103,8 +103,9 @@ button:hover {
 }
 
 button:active {
-  background-color: var(--button-color);
-  color: white;
+  transition-duration: 0.1s;
+  background-color: white;
+  color: var(--button-color);
 }
 
 .bottom a {
